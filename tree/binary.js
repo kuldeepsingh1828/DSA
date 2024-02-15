@@ -71,15 +71,16 @@ class BinaryTree {
 // search for a node with given data
 function search(root, value) {
     // Base case: if root is null or if the value is found at the root
-    if (root === null || root?.value === value) {
+    console.log(root);
+    if (root === null || root.value === value) {
         return root;
     }
     // If the value to be searched is greater than the root's value, search in the right subtree
-    if (root?.value < value) {
+    if (root.value < value) {
         return search(root.right, value);
     }
     // If the value to be searched is smaller than the root's value, search in the left subtree
-    return search(root?.left, value);
+    return search(root.left, value);
 }
 // Example usage:
 const tree = new BinaryTree();
